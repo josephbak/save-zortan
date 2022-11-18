@@ -6,6 +6,7 @@
 # 5. Test
 # 6. Polish
 
+# import the stuff we require
 from typing import Final
 
 # indicating constant using all capitals
