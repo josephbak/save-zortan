@@ -159,20 +159,20 @@ def attack() -> None:
             print("Error! No superheros or villains to fight.")
 
         
-def simulate_attack(attack_num: int, superhero: Character, villain: Character) -> None:
+def simulate_attack(attack_num: int, superhero: SuperHero, villain: Villain) -> None:
     """Simulate the actual attack."""
 
     # Set life
-    inc_hero_life(superhero['life'])
-    inc_villain_life(villain['life'])
+    Life.inc_hero_life(superhero.life)
+    Life.inc_villain_life(villain.life)
 
     print(
-        f"Attack: {attack_num + 1} => {superhero['name']} is going to fight with {villain['name']}."
+        f"Attack: {attack_num + 1} => {superhero.name} is going to fight with {villain.name}."
     )
 
     # Actual attack
-    dec_hero_life(villain['attack_power'])
-    dec_villain_life(superhero['attack_power'])
+    Life.dec_hero_life(villain.attack_power)
+    Life.dec_villain_life(superhero.attack_power)
 
 
 # ---------------------------- Final Game Status --------------------------
@@ -188,7 +188,7 @@ def win_or_lose() -> None:
     print("=" * 58)
 
     # Win or Lose
-    if hero_life >= villain_life:
+    if Life.hero_life >= Life.villain_life:
         print(WIN_MSG)
     else:
         print(LOST_MSG)
