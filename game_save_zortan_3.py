@@ -80,7 +80,7 @@ def get_superhero(index: int) -> Character | None:
 # ---------------------------- Villains ---------------------------------
 def get_all_villains() -> list[Character]:
     # Super Villains
-    THANOS: Final[Character] = {"name": "Thanos", "attack_power": 1500, "life": 1500}
+    THANOS: Final[Character] = {"name": "Thanos", "attack_power": 400, "life": 1500}
     REDSKULL: Final[Character] = {"name": "Redskull", "attack_power": 300, "life": 800}
     PROXIMA: Final[Character] = {"name": "Proxima", "attack_power": 320, "life": 800}
 
