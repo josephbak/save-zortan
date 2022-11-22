@@ -16,14 +16,13 @@ def main() -> None:
     print(game1.state)
     print(game1)
 
-    # method chaining
+    # method chaining by returning self
     game1 =game1.attack().win_or_lose()
     print(game1.state)
 
     print()
 
     game2 = Game(player=p2).attack().win_or_lose()
-    
 
 
 main()
